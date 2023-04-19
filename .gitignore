@@ -58,3 +58,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.vsconfig
+Assets/Acorn Bringer Assets.meta
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature.meta
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Animators.meta
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Animators/Animator_Bird1.controller
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Animators/Animator_Bird1.controller.meta
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Animators/Animator_Bird2.controller
+Assets/Acorn Bringer Assets/Simplistic Low Poly Nature/Animators/Animator_Bird2.controller.meta

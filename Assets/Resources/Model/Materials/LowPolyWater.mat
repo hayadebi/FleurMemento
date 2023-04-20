@@ -141,7 +141,7 @@ Material:
     - _EdgeFoamLevelDestination: 3
     - _EdgeFoamPower: 1
     - _FadeExp: 0.91503274
-    - _FoamOpacity: 0.72
+    - _FoamOpacity: 0.25
     - _FoamWaveDependency: 0.10205479
     - _FresnelPower: 1.7931035
     - _FresnelScale: 0.15
@@ -168,7 +168,7 @@ Material:
     - _TreshouldFalloff: 1.57
     - _WaterDepth: 40.98077
     - _WaterOpacity: 0.5
-    - _WaterOrientation: 2.35
+    - _WaterOrientation: 0.45
     - _WaveCapsAmount: 0.18275861
     - _WaveFoamDistort: 0.27931035
     - _WaveScale: 0.046289656
@@ -213,7 +213,7 @@ Material:
     - _ShoreTiling: {r: 1, g: 1, b: 0.1, a: 0.1}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
     - _UnderwaterColor: {r: 0.6950323, g: 0.89552236, b: 0.7502397, a: 1}
-    - _WaterColor: {r: 0.3262727, g: 0.3686163, b: 0.49056602, a: 0.5019608}
+    - _WaterColor: {r: 0.3262727, g: 0.3686163, b: 0.49056602, a: 0.29803923}
     - _WaveOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WaveScale4: {r: 0, g: 0, b: 0, a: 0}
     - _WavesColor: {r: 0.6691177, g: 0.71247464, b: 1, a: 0.347}

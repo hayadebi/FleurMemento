@@ -262,7 +262,7 @@ public class npcsay : MonoBehaviour
         }
         else if (col.tag == PlayerTag && !saytrg && npctype == 12 && inputNumber == GManager.instance.EventNumber[eventnumber] && GManager.instance.walktrg && GManager.instance.handtrg == -1)
         {
-            if (!goal_trg || (goal_trg && (goal_player.transform.position - goal_tubomi.transform.position).magnitude <= 2f))
+            if (!goal_trg || (goal_trg && (goal_player.transform.position - goal_tubomi.transform.position).magnitude <= 1.5f))
             {
                 if (saySc == null)
                 {

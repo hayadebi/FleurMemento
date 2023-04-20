@@ -12,7 +12,7 @@ Shader "Water/Ocean_04" {
         [Space(10)]
         _Noiselevel ("Noise level", Range(0, 0.12)) = 0.02
         _FoamOpacity ("Foam Opacity", Range(0, 2)) = 1
-        _WaterOrientation ("Water Orientation", Range(0, 8)) = 2
+        _WaterOrientation ("Water Orientation", Range(0, 4)) = 2
     }
     SubShader {
         Tags {

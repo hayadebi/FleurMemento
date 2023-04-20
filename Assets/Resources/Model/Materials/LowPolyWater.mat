@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LowPolyWater
-  m_Shader: {fileID: 4800000, guid: c5617dffeb9944fa3a50334e9f9f8c5e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1534fd8d78ec6f944a7142d0b0feeffd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -19,12 +19,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Addittionalfoam:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: d12dc5b6df76c6b42844432e6b9f4005, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Caustics:
         m_Texture: {fileID: 2800000, guid: eb9e91ee4c264b942a46baeec92ca0a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorControl:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTex:
@@ -43,6 +51,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Fresnel:
         m_Texture: {fileID: 2800000, guid: 5b5c5575fd4c74abd9f7b30862fb76a3, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -51,12 +63,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: cff6f2c02e93742c095cd0c69d3d92ce, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Higlight:
+        m_Texture: {fileID: 2800000, guid: 38ab8aca4d89a4c4f93b72ac8d1e3f8e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e6f8288974c664a309d6c66de636978c, type: 3}
+        m_Texture: {fileID: 2800000, guid: bcb8d8610971dd7488f2f7ce436f6fa1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 1, y: 1}
-    - _ReflectionTex:
+    - _MainTexture:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 84ca0967d8e116a48bef3706d3fdc558, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionTex:
+        m_Texture: {fileID: 2800000, guid: 38ab8aca4d89a4c4f93b72ac8d1e3f8e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectiveColor:
@@ -73,6 +97,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _SecondDisplacementHeightMap:
         m_Texture: {fileID: 2800000, guid: 4facc21e08e3a43ed97c930f7dae6e7b, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineTexture:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShoreTex:
@@ -105,10 +133,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Ambient: 1
+    - _Cutoff: 0.5
     - _Displacement: 0.27863377
     - _DisplacementTiling: 18.586807
     - _DistortionPower: 5
+    - _EdgeFoamLevel: 2
+    - _EdgeFoamLevelDestination: 3
+    - _EdgeFoamPower: 1
     - _FadeExp: 0.91503274
+    - _FoamOpacity: 0.72
     - _FoamWaveDependency: 0.10205479
     - _FresnelPower: 1.7931035
     - _FresnelScale: 0.15
@@ -119,6 +152,7 @@ Material:
     - _InvFadeFoam: 0.1217
     - _MaxTreshold: 0.5
     - _MaxTreshould: 0.5
+    - _Noiselevel: 0.0544
     - _NormalsDisplacement: 0
     - _ReflDistort: 0.9267696
     - _RefrDistort: 1.4393286
@@ -133,6 +167,8 @@ Material:
     - _TreshouldDensity: 15
     - _TreshouldFalloff: 1.57
     - _WaterDepth: 40.98077
+    - _WaterOpacity: 0.5
+    - _WaterOrientation: 2.35
     - _WaveCapsAmount: 0.18275861
     - _WaveFoamDistort: 0.27931035
     - _WaveScale: 0.046289656
@@ -177,10 +213,12 @@ Material:
     - _ShoreTiling: {r: 1, g: 1, b: 0.1, a: 0.1}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
     - _UnderwaterColor: {r: 0.6950323, g: 0.89552236, b: 0.7502397, a: 1}
+    - _WaterColor: {r: 0.3262727, g: 0.3686163, b: 0.49056602, a: 0.5019608}
     - _WaveOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WaveScale4: {r: 0, g: 0, b: 0, a: 0}
     - _WavesColor: {r: 0.6691177, g: 0.71247464, b: 1, a: 0.347}
     - _WorldLightDir: {r: -0.030375138, g: -0.20139083, b: -0.97903997, a: 0}
+    - _horizonColor: {r: 0.172, g: 0.463, b: 0.435, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

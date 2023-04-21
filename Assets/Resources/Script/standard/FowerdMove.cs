@@ -6,6 +6,7 @@ public class FowerdMove : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 2f;
+    public Transform forpos;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +18,11 @@ public class FowerdMove : MonoBehaviour
     {
         if (GManager.instance.walktrg && !GManager.instance.over)
         {
-            rb.velocity = transform.forward * speed;
+            rb.velocity = forpos.forward * speed;
 
         }
         else if (rb.velocity != Vector3.zero)
             rb.velocity = Vector3.zero;
     }
+  
 }

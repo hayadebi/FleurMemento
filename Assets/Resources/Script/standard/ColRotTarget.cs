@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColRotTarget : MonoBehaviour
 {
+    public int set_index = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,8 @@ public class ColRotTarget : MonoBehaviour
         if(col.tag == "ground" && col.GetComponent<objAngle>())
         {
             objAngle tmpangle = col.GetComponent<objAngle>();
-            if (tmpangle.targetobj.Length - 1 > tmpangle.indextarget)
-                tmpangle.indextarget += 1;
+            if (set_index != -1)
+                tmpangle.indextarget = set_index;
             else
                 Destroy(col.gameObject);
         }

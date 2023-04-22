@@ -5,8 +5,8 @@ using UnityEngine;
 public class SummonLog : MonoBehaviour
 {
     public GameObject summon_targetobj;
-    public float max_cooltime = 10f;
-    private float check_summontime = 0;
+    public float max_cooltime = 12f;
+    public float check_summontime = 6;
     // Start is called before the first frame update
     void Start()
     {

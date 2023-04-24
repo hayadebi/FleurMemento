@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AdditionalTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Addittionalfoam:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -52,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FoamTexture:
-        m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1f024fcf295217347a5ff34714c776f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Fresnel:
@@ -63,8 +67,12 @@ Material:
         m_Texture: {fileID: 2800000, guid: cff6f2c02e93742c095cd0c69d3d92ce, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Highlight:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Higlight:
-        m_Texture: {fileID: 2800000, guid: 38ab8aca4d89a4c4f93b72ac8d1e3f8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 805610cde188d0247862949f08706ee9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -72,11 +80,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 1, y: 1}
     - _MainTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 38ab8aca4d89a4c4f93b72ac8d1e3f8e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
-        m_Texture: {fileID: 2800000, guid: 84ca0967d8e116a48bef3706d3fdc558, type: 3}
+        m_Texture: {fileID: 2800000, guid: c5a62ce8bbee5884383e75a44ed2d328, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionTex:
@@ -141,7 +149,10 @@ Material:
     - _EdgeFoamLevelDestination: 3
     - _EdgeFoamPower: 1
     - _FadeExp: 0.91503274
-    - _FoamOpacity: 0.25
+    - _FoamLevel: 3
+    - _FoamLevelDestination: 4
+    - _FoamOpacity: 0.47
+    - _FoamPower: 0.3944446
     - _FoamWaveDependency: 0.10205479
     - _FresnelPower: 1.7931035
     - _FresnelScale: 0.15
@@ -152,8 +163,9 @@ Material:
     - _InvFadeFoam: 0.1217
     - _MaxTreshold: 0.5
     - _MaxTreshould: 0.5
-    - _Noiselevel: 0.0544
+    - _Noiselevel: 0.0599
     - _NormalsDisplacement: 0
+    - _Opacity: 1
     - _ReflDistort: 0.9267696
     - _RefrDistort: 1.4393286
     - _Shininess: 318.04
@@ -168,7 +180,7 @@ Material:
     - _TreshouldFalloff: 1.57
     - _WaterDepth: 40.98077
     - _WaterOpacity: 0.5
-    - _WaterOrientation: 0.45
+    - _WaterOrientation: 0.36
     - _WaveCapsAmount: 0.18275861
     - _WaveFoamDistort: 0.27931035
     - _WaveScale: 0.046289656

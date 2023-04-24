@@ -59,6 +59,8 @@ public class player : MonoBehaviour
     public ColEvent stopcol;
     private float no_ground = 0;
     public float nowalk_hight = 0.27f;
+    public bool auto_changetrg = false;
+    private bool watertrg = false;
 
     // Start is called before the first frame update
 
@@ -99,8 +101,15 @@ public class player : MonoBehaviour
         if (overhight != 9999 && transform.position.y < -overhight && !reset_trg)
         {
             reset_trg = true;
+            if (player_id != GManager.instance.playerselect)
+                auto_changetrg = true;
+            audioSource.Stop();
             GManager.instance.walktrg = false;
-            anim.SetInteger("Anumber", stand_anim);
+            if (player_id == 0)
+                GManager.instance.setrg = 9;
+            else if (player_id == 1)
+                GManager.instance.setrg = 6;
+            anim.SetInteger("Anumber", 444);
             rb.velocity = Vector3.zero;
             reset_load();
             Instantiate(GManager.instance.effectobj[4], transform.position, transform.rotation);
@@ -170,8 +179,9 @@ public class player : MonoBehaviour
                 Invoke(nameof(load_scenechange), 1.2f);
             }
             //キャラクター変更
-            if (isground.ColTrigger && player_id == GManager.instance.playerselect && ((GManager.instance.EventNumber[3] >= 3 && GManager.instance.stageNumber == 0)|| GManager.instance.stageNumber > 0) && Input.GetKeyDown(KeyCode.F) && GManager.instance.freenums[3] <= 0 && GManager.instance.handtrg != 5)
+            if ((isground.ColTrigger && player_id == GManager.instance.playerselect && ((GManager.instance.EventNumber[3] >= 3 && GManager.instance.stageNumber == 0)|| GManager.instance.stageNumber > 0) && Input.GetKeyDown(KeyCode.F) && GManager.instance.freenums[3] <= 0 && GManager.instance.handtrg != 5)||(auto_changetrg && GManager.instance.handtrg != 5))
             {
+                auto_changetrg = false;
                 GManager.instance.freenums[3] = 1;
                 if (GManager.instance.playerselect == 0)
                 {
@@ -389,7 +399,7 @@ public class player : MonoBehaviour
                 if (GManager.instance.Triggers[4] < 1)
                 {
                     transform.rotation = Quaternion.LookRotation(newDir);
-                    Vector3 _forward = this.transform.forward * (playerspeed / 1.5f) + Vector3.up * -(gravity / 2);
+                    Vector3 _forward = this.transform.forward * playerspeed + this.transform.up * -gravity;
                     if (!stopcol.ColTrigger && GManager.instance.walktrg)
                     {
                         rb.velocity = _forward;
@@ -440,7 +450,7 @@ public class player : MonoBehaviour
                 }
                 else
                 {
-                    rb.velocity = Vector3.up * -gravity;
+                    rb.velocity = this.transform.up * -gravity;
                 }
             }
         }
@@ -465,6 +475,14 @@ public class player : MonoBehaviour
             }
         }
         
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "water" && !watertrg )
+        {
+            watertrg = true;
+            GManager.instance.setrg = 10;
+        }
     }
     public void load_scenechange()
     {

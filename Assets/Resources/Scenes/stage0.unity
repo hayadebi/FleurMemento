@@ -300,6 +300,7 @@ MonoBehaviour:
   jump_setrg: 4
   stopcol: {fileID: 188376685}
   nowalk_hight: 0.2
+  auto_changetrg: 0
   maxYAngle: 45
   minYAngle: 45
   latestPos: {x: 0, y: 0, z: 0}
@@ -27921,7 +27922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 541839410}
+  selectedFlowchart: {fileID: 1172247759}
 --- !u!4 &842854238
 Transform:
   m_ObjectHideFlags: 1
@@ -34749,7 +34750,7 @@ MonoBehaviour:
   scrollPos: {x: 70.09474, y: -15.739201}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 200
   zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
@@ -34758,8 +34759,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1172247765}
-  selectedCommands: []
+  - {fileID: 1172247829}
+  selectedCommands:
+  - {fileID: 1172247951}
   variables:
   - {fileID: 1172247757}
   - {fileID: 1172247787}
@@ -34968,7 +34970,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 52.000004
     y: 50.93617
-    width: 82.34042
+    width: 85.106384
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -36459,7 +36461,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 190.06383
     y: 81
-    width: 92.55319
+    width: 94.68085
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -36850,7 +36852,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 327
     y: 114
-    width: 77.23404
+    width: 77.65958
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -44081,7 +44083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 274
   indentLevel: 1
-  storyText: "\u2026\u2026\u2026{w=1}\u5206\u304B\u3063\u305F\u308F\u3002\n\u3069\u3061\u3089\u306B\u305B\u3088\u541B\u306F\u3053\u306E\"\u30C7\u30A3\u30B9\u30C8\u30D4\u30A2\u738B\u56FD\"\u304B\u3089\u51FA\u306A\u3044\u3068\n\u672C\u5F53\u306E\u81EA\u7531\u306F\u624B\u306B\u5165\u3089\u306A\u3044\u3057\u2026"
+  storyText: "\u2026\u2026\u2026{w=1}\u5206\u304B\u3063\u305F\u308F\u3002\n\u3069\u3061\u3089\u306B\u305B\u3088\u3001\u541B\u306F\u3053\u306E\"\u30C7\u30A3\u30B9\u30C8\u30D4\u30A2\u738B\u56FD\"\u304B\u3089\u51FA\u306A\u3044\u3068\n\u672C\u5F53\u306E\u81EA\u7531\u306F\u624B\u306B\u5165\u3089\u306A\u3044\u3060\u308D\u3046\u3057\u2026"
   description: 
   character: {fileID: 1394544936}
   portrait: {fileID: 21300000, guid: 97317ecaa0aa9104da3fe03efb2f2367, type: 3}
@@ -51590,7 +51592,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1172248106
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -51611,7 +51613,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1172248107
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -51632,7 +51634,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1172248108
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -81941,6 +81943,7 @@ MonoBehaviour:
   jump_setrg: 1
   stopcol: {fileID: 461437129}
   nowalk_hight: 0.2
+  auto_changetrg: 0
   maxYAngle: 45
   minYAngle: 45
   latestPos: {x: 0, y: 0, z: 0}

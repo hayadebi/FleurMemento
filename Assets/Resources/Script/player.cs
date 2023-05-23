@@ -69,6 +69,7 @@ public class player : MonoBehaviour
         audioSource = this.GetComponent<AudioSource>();
         rb = this.GetComponent<Rigidbody>();
         rb.useGravity = false;
+        if (GManager.instance.stageNumber == 0) GManager.instance.playerselect = 0;
         //セーブしてある位置情報を取得し、プレイヤーのスポーン地点を決定する
         //GManager.instance.posX = PlayerPrefs.GetFloat("posX", 0f);
         //GManager.instance.posY = PlayerPrefs.GetFloat("posY", 0f);

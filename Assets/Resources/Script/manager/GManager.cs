@@ -193,6 +193,10 @@ public class GManager : MonoBehaviour
 
     public string twoplayermode = "行動";
     public float hand_cooltime = 0;
+    public int fleurendtrg = 0;
+    public string next_url = "";
+    public GameObject UrlCheckUI;
+    public bool gimmickclear = false;
     private void Awake()
     {
         if (instance == null)

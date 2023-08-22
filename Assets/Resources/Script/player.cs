@@ -59,7 +59,7 @@ public class player : MonoBehaviour
     public ColEvent stopcol;
     private float no_ground = 0;
     public float nowalk_hight = 0.27f;
-    public bool auto_changetrg = false;
+    //public bool auto_changetrg = false;
     private bool watertrg = false;
 
     // Start is called before the first frame update
@@ -101,8 +101,8 @@ public class player : MonoBehaviour
         if (overhight != 9999 && transform.position.y < -overhight && !reset_trg)
         {
             reset_trg = true;
-            if (player_id != GManager.instance.playerselect)
-                auto_changetrg = true;
+            //if (player_id != GManager.instance.playerselect)
+            //    auto_changetrg = true;
             audioSource.Stop();
             GManager.instance.walktrg = false;
             if (player_id == 0)
@@ -179,9 +179,9 @@ public class player : MonoBehaviour
                 Invoke(nameof(load_scenechange), 1.2f);
             }
             //キャラクター変更
-            if ((isground.ColTrigger && player_id == GManager.instance.playerselect && ((GManager.instance.EventNumber[3] >= 3 && GManager.instance.stageNumber == 0)|| GManager.instance.stageNumber > 0) && Input.GetKeyDown(KeyCode.F) && GManager.instance.freenums[3] <= 0 && GManager.instance.handtrg != 5)||(auto_changetrg && GManager.instance.handtrg != 5))
+            if ((isground.ColTrigger && player_id == GManager.instance.playerselect && ((GManager.instance.EventNumber[3] >= 3 && GManager.instance.stageNumber == 0)|| GManager.instance.stageNumber > 0) && Input.GetKeyDown(KeyCode.F) && GManager.instance.freenums[3] <= 0 && GManager.instance.handtrg != 5))//||(auto_changetrg && GManager.instance.handtrg != 5))
             {
-                auto_changetrg = false;
+                //auto_changetrg = false;
                 GManager.instance.freenums[3] = 1;
                 if (GManager.instance.playerselect == 0)
                 {
@@ -384,6 +384,7 @@ public class player : MonoBehaviour
                 GManager.instance.twoplayermode = "行動";
                 GManager.instance.setrg = 2;
             }
+            if (GManager.instance.playerselect == 0 && GManager.instance.handtrg == 5 && audioSource.isPlaying) audioSource.Stop();
             if (GManager.instance.handtrg != 5 && secondScript.isground.ColTrigger && -secondScript.overhight < secondP.transform.position.y && GManager.instance.twoplayermode =="行動")
             {
                 if (!stopcol.onAction)
@@ -478,10 +479,23 @@ public class player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "water" && !watertrg )
+        if(col.tag == "water" && !reset_trg )
         {
-            watertrg = true;
             GManager.instance.setrg = 10;
+            if (player_id == 1)
+            {
+                reset_trg = true;
+                //if (player_id != GManager.instance.playerselect)
+                //    auto_changetrg = true;
+                audioSource.Stop();
+                GManager.instance.walktrg = false;
+                anim.SetInteger("Anumber", 444);
+                rb.velocity = Vector3.zero;
+                reset_load();
+                Instantiate(GManager.instance.effectobj[4], transform.position, transform.rotation);
+
+                Invoke(nameof(load_scenechange), 1f);
+            }
         }
     }
     public void load_scenechange()

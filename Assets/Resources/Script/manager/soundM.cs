@@ -15,21 +15,30 @@ public class soundM : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if(Input.GetKeyDown (KeyCode.Delete))
+        if (!audioS.isPlaying &&GManager.instance.gimmickclear)
         {
-            PlayerPrefs.DeleteAll();
-            PlayerPrefs.Save();
+            GManager.instance.gimmickclear = false;
         }
-        if( GManager.instance.ase != null)
+        //if (Input.GetKeyDown(KeyCode.Delete))
+        //{
+        //    PlayerPrefs.DeleteAll();
+        //    PlayerPrefs.Save();
+        //}
+        if (GManager.instance.ase != null)
         {
             audioS.PlayOneShot(GManager.instance.ase);
             GManager.instance.ase = null;
         }
-        else if( GManager.instance.setrg != -1 && GManager.instance.setrg != 99)
+        else if (GManager.instance.setrg != -1 && GManager.instance.setrg != 99)
         {
+            if (GManager.instance.setrg == 13)
+            {
+                GManager.instance.gimmickclear = true;
+            }
             audioS.PlayOneShot(se[GManager.instance.setrg]);
             GManager.instance.setrg = -1;
         }
+
     }
 
 }

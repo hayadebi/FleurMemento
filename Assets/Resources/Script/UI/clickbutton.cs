@@ -23,6 +23,7 @@ public class clickbutton : MonoBehaviour
     public Animator anim_;
     public string a_name;
     public int a_setnumber;
+    public GameObject target_obj;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,16 @@ public class clickbutton : MonoBehaviour
     void Update()
     {
         
+    }
+    public void SetOnView()
+    {
+        GManager.instance.setrg = 2;
+        target_obj.SetActive(true);
+    }
+    public void SetNotView()
+    {
+        GManager.instance.setrg = 2;
+        target_obj.SetActive(false);
     }
     public void animClick()
     {
@@ -54,7 +65,7 @@ public class clickbutton : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
-        Application.OpenURL("https://unitygamehayadebi.jimdofree.com/");
+        Application.OpenURL("https://unitygamehayadebi.jimdofree.com/2023/03/26/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%A0%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%94%E3%82%A2-%E9%96%8B%E7%99%BA-%E4%BD%9C%E5%93%81%E7%B4%B9%E4%BB%8B/");
         Application.Quit();
     }
     public void settingClick()
@@ -243,7 +254,7 @@ public class clickbutton : MonoBehaviour
     }
     public void resetN()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         GManager.instance.walktrg = true;
         GManager.instance.ESCtrg = false;
         GManager.instance.over = false;

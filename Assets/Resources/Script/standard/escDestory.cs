@@ -13,9 +13,16 @@ public class escDestory : MonoBehaviour
     public float destroytime = 0.1f;
     bool inputon = false;
     public Canvas canvas = null;
+    public bool cleartrg = false;
     // Start is called before the first frame update
     void Start()
     {
+        if (cleartrg)
+        {
+            GManager.instance.endtitle = true;
+            GManager.instance.fleurendtrg = 1;
+            PlayerPrefs.SetInt("fleur_endtrg", 1);
+        }
         if (mousetrg)
         {
             Cursor.lockState = CursorLockMode.None;

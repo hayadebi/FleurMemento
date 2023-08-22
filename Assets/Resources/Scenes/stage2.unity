@@ -8706,24 +8706,6 @@ MonoBehaviour:
   - {fileID: 3340499134952838708}
   - {fileID: 650643894}
   this_enableren: {fileID: 373195683}
-  player_ren:
-  - {fileID: 8548510749930055207}
-  - {fileID: 8548510749888792232}
-  tubomi_ren:
-  - {fileID: 6076687691286743449}
-  - {fileID: 6076687689542849380}
-  - {fileID: 6076687691485721731}
-  - {fileID: 6076687690341801390}
-  - {fileID: 600285441866997768}
-  - {fileID: 1797334804923790323}
-  - {fileID: 3407867573568091384}
-  - {fileID: 4676549418407102573}
-  - {fileID: 7614848085042084827}
-  - {fileID: 1245868068568469768}
-  - {fileID: 6076687690472363015}
-  - {fileID: 6076687691182192017}
-  - {fileID: 6076687691229584276}
-  - {fileID: 6076687690292970120}
   player_mag: 1
   playerobj: {fileID: 8548510750783084661}
   tubomiobj: {fileID: 6076687690954392420}
@@ -27019,6 +27001,10 @@ MonoBehaviour:
   staytrg: 0
   connect_button: {fileID: 1686199339}
   groundtrg: 0
+  onoff_laserobj: {fileID: 0}
+  offlaser: {fileID: 0}
+  set_setrg: 11
+  gimmick_clear: 1
 --- !u!23 &1286757878
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37985,6 +37971,10 @@ MonoBehaviour:
   staytrg: 0
   connect_button: {fileID: 1286757877}
   groundtrg: 0
+  onoff_laserobj: {fileID: 0}
+  offlaser: {fileID: 0}
+  set_setrg: 11
+  gimmick_clear: 1
 --- !u!23 &1686199340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50662,6 +50652,7 @@ MonoBehaviour:
   anim_: {fileID: 0}
   a_name: 
   a_setnumber: 0
+  target_obj: {fileID: 0}
 --- !u!114 &1699053007324071255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62915,6 +62906,10 @@ MonoBehaviour:
   staytrg: 0
   connect_button: {fileID: 0}
   groundtrg: 1
+  onoff_laserobj: {fileID: 0}
+  offlaser: {fileID: 0}
+  set_setrg: 11
+  gimmick_clear: 0
 --- !u!82 &7229398703605336417
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63775,24 +63770,6 @@ MonoBehaviour:
   - {fileID: 3340499134952838708}
   - {fileID: 650643894}
   this_enableren: {fileID: 7744218377279458871}
-  player_ren:
-  - {fileID: 8548510749930055207}
-  - {fileID: 8548510749888792232}
-  tubomi_ren:
-  - {fileID: 6076687691286743449}
-  - {fileID: 6076687689542849380}
-  - {fileID: 6076687691485721731}
-  - {fileID: 6076687690341801390}
-  - {fileID: 600285441866997768}
-  - {fileID: 1797334804923790323}
-  - {fileID: 3407867573568091384}
-  - {fileID: 4676549418407102573}
-  - {fileID: 7614848085042084827}
-  - {fileID: 1245868068568469768}
-  - {fileID: 6076687690472363015}
-  - {fileID: 6076687691182192017}
-  - {fileID: 6076687691229584276}
-  - {fileID: 6076687690292970120}
   player_mag: 1
   playerobj: {fileID: 8548510750783084661}
   tubomiobj: {fileID: 6076687690954392420}

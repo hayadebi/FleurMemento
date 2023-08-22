@@ -69,6 +69,9 @@ public class npcsay : MonoBehaviour
     public GameObject goal_tubomi = null;
     public bool debugtrg = false;
     private bool scenechange = false;
+    public AudioSource endaudio;
+    public AudioClip endbgm;
+    public GameObject endui;
     // Start is called before the first frame update
     void Start()
     {
@@ -536,8 +539,16 @@ public class npcsay : MonoBehaviour
         }
         else if(goal_trg && debugtrg)
         {
-            PlayerPrefs.DeleteAll();
+            resetN();
             GManager.instance.walktrg = false;
+            endaudio.Stop();
+            endaudio.clip = endbgm;
+            endaudio.Play();
+            GManager.instance.endtitle = true;
+            GManager.instance.fleurendtrg = 1;
+            PlayerPrefs.SetInt("fleur_endtrg", 1);
+            PlayerPrefs.Save();
+            Instantiate(endui, transform.position, transform.rotation);
         }
     }
     void SceneChange()
@@ -551,6 +562,75 @@ public class npcsay : MonoBehaviour
     void SayTrg()
     {
         saytrg = false;
+    }
+    public void resetN()
+    {
+        GManager.instance.walktrg = true;
+        GManager.instance.ESCtrg = false;
+        GManager.instance.over = false;
+        GManager.instance.setmenu = 0;
+        GManager.instance.txtget = "";
+        GManager.instance.endtitle = false;
+        GManager.instance.pushtrg = false;
+        for (int i = 0; i < GManager.instance.EventNumber.Length;)
+        {
+            GManager.instance.EventNumber[i] = 0;
+            i++;
+        }
+        for (int i = 0; i < GManager.instance.freenums.Length;)
+        {
+            GManager.instance.freenums[i] = 0;
+            i++;
+        }
+        GManager.instance.posX = 0;
+        GManager.instance.posY = 0;
+        GManager.instance.posZ = 0;
+        GManager.instance.stageNumber = 0;
+        for (int i = 0; i < GManager.instance.ItemID.Length;)
+        {
+            GManager.instance.ItemID[i].itemnumber = 0;
+            GManager.instance.ItemID[i].gettrg = 0;
+            GManager.instance.ItemID[i]._quickset = -1;
+            GManager.instance.ItemID[i]._equalsset = -1;
+            GManager.instance.ItemID[i].pl_equalsselect = -1;
+            i++;
+        }
+        for (int i = 0; i < GManager.instance.Quick_itemSet.Length;)
+        {
+            GManager.instance.Quick_itemSet[i] = -1;
+            i++;
+        }
+        for (int i = 0; i < GManager.instance.P_equalsID.Length;)
+        {
+            GManager.instance.P_equalsID[i].hand_equals = -1;
+            GManager.instance.P_equalsID[i].accessory_equals = -1;
+            i++;
+        }
+        for (int i = 0; i < GManager.instance.Pstatus.Length;)
+        {
+            GManager.instance.Pstatus[i].selectskill = -1;
+            if (i == 0)
+            {
+                GManager.instance.Pstatus[i].getpl = 1;
+            }
+            else
+            {
+                GManager.instance.Pstatus[i].getpl = 0;
+            }
+            i++;
+        }
+        GManager.instance.playerselect = 0;
+        for (int i = 0; i < GManager.instance.Triggers.Length;)
+        {
+            GManager.instance.Triggers[i] = 0;
+            i++;
+        }
+        for (int i = 0; i < GManager.instance.achievementsID.Length;)
+        {
+            GManager.instance.achievementsID[i].gettrg = 0;
+            i++;
+        }
+        GManager.instance.handtrg = -1;
     }
     public void saveN()
     {

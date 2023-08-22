@@ -361,6 +361,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18562095}
   m_Mesh: {fileID: -7372468810474598307, guid: f424407e65d02ad4eb86bacf29d62a1b, type: 3}
+--- !u!1001 &23380793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797793, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797795, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797795, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389094960611797797, guid: 3262b54c68c60dd4a8bc97f329d524b6,
+        type: 3}
+      propertyPath: m_Name
+      value: gimmickclear
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3262b54c68c60dd4a8bc97f329d524b6, type: 3}
 --- !u!1 &24683787
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,7 +9749,7 @@ GameObject:
   - component: {fileID: 569861517}
   m_Layer: 8
   m_Name: danbox
-  m_TagString: water
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20081,6 +20160,9 @@ MonoBehaviour:
   goal_player: {fileID: 66204818095664177}
   goal_tubomi: {fileID: 3910010619356049659}
   debugtrg: 0
+  endaudio: {fileID: 0}
+  endbgm: {fileID: 0}
+  endui: {fileID: 0}
 --- !u!114 &1258448097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37832,6 +37914,7 @@ MonoBehaviour:
   anim_: {fileID: 0}
   a_name: 
   a_setnumber: 0
+  target_obj: {fileID: 0}
 --- !u!222 &1058734622383176228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38964,7 +39047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24799dc1ad309864394dce648511bd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 165
+  jumpForce: 180
   effect_obj:
   - {fileID: 8726804518290327906, guid: 79b1befe1da8fd9489af98bcd6c13ad2, type: 3}
   - {fileID: 2195127133221288674, guid: 079c3fc863500e340b66d396fb162698, type: 3}
@@ -40325,7 +40408,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3313344248213810734}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 118343ef46f23d2458e439d9bc546725, type: 3}
   m_Name: 
@@ -41216,6 +41299,9 @@ MonoBehaviour:
   goal_player: {fileID: 0}
   goal_tubomi: {fileID: 0}
   debugtrg: 0
+  endaudio: {fileID: 0}
+  endbgm: {fileID: 0}
+  endui: {fileID: 0}
 --- !u!114 &3506598509522847643
 MonoBehaviour:
   m_ObjectHideFlags: 0

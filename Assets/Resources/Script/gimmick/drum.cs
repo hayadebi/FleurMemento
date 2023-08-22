@@ -37,8 +37,8 @@ public class drum : MonoBehaviour
             if ((playerobj.gameObject.transform.position - transform.position).magnitude < player_mag)
             {
                 playerobj.reset_trg = true;
-                if (playerobj.player_id != GManager.instance.playerselect)
-                    playerobj.auto_changetrg = true;
+                //if (playerobj.player_id != GManager.instance.playerselect)
+                //    playerobj.auto_changetrg = true;
                 playerobj.audioSource.Stop();
                 playerobj.anim.SetInteger(playerobj.numbername, 444);
                 GManager.instance.setrg = 9;
@@ -50,8 +50,8 @@ public class drum : MonoBehaviour
             else if ((tubomiobj.gameObject.transform.position - transform.position).magnitude < player_mag)
             {
                 tubomiobj.reset_trg = true;
-                if (tubomiobj.player_id != GManager.instance.playerselect)
-                    tubomiobj.auto_changetrg = true;
+                //if (tubomiobj.player_id != GManager.instance.playerselect)
+                //    tubomiobj.auto_changetrg = true;
                 tubomiobj.audioSource.Stop();
                 tubomiobj.anim.SetInteger(tubomiobj.numbername, 444);
                 GManager.instance.setrg = 6;

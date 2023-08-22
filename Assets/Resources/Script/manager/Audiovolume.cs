@@ -32,12 +32,12 @@ public class Audiovolume : MonoBehaviour
     private void Update()
     {
         AudioSource audio = GetComponent<AudioSource>();
-        if (GManager.instance.over || !GManager.instance.walktrg)
+        if (GManager.instance.over || !GManager.instance.walktrg||GManager.instance.gimmickclear)
         {
             if (oldvolume != GManager.instance.audioMax / 16 && !setrg && !GManager.instance.over)
             {
-                audio.volume = GManager.instance.audioMax / 16;
-                oldvolume = GManager.instance.audioMax / 16;
+                audio.volume = GManager.instance.audioMax / 24;
+                oldvolume = GManager.instance.audioMax / 24;
             }
             else if (oldvolume != 0 && !setrg && GManager.instance.over)
             {

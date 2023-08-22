@@ -78,8 +78,8 @@ public class laservlocker : MonoBehaviour
                     distance = 0;
                     temp_p = hit.collider.gameObject.GetComponent<player>();
                     temp_p.reset_trg = true;
-                    if (temp_p.player_id != GManager.instance.playerselect)
-                        temp_p.auto_changetrg = true;
+                    //if (temp_p.player_id != GManager.instance.playerselect)
+                    //    temp_p.auto_changetrg = true;
                     temp_p.audioSource.Stop();
                     temp_p.anim.SetInteger(temp_p.numbername, 444);
                     if(temp_p.player_id == 0 )

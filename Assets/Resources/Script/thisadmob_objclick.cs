@@ -22,8 +22,15 @@ public class thisadmob_objclick : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "noactive")
                 clickedGameObject = hit.collider.gameObject;
-            if (clickedGameObject != null && clickedGameObject == this.gameObject)
-                Application.OpenURL(OpenURLText);
+            if ((clickedGameObject != null && clickedGameObject == this.gameObject) && GManager.instance.setmenu<=0)
+            {
+                GManager.instance.setmenu = 1;
+                GManager.instance.next_url = OpenURLText;
+                GManager.instance.setrg = 2;
+                Instantiate(GManager.instance.UrlCheckUI, transform.position, transform.rotation);
+                //Application.OpenURL(OpenURLText);
+            }
+                
         }
     }
 }

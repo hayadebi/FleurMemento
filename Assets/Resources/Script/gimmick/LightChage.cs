@@ -24,14 +24,14 @@ public class LightChage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        if(GManager.instance.playerselect == 1 && GManager.instance.walktrg && !GManager.instance.over && GManager.instance.setmenu <= 0)
+        if(GManager.instance.playerselect == 1 && GManager.instance.walktrg && !GManager.instance.over && GManager.instance.setmenu <= 0 && col.gameObject == tubomi_pl.gameObject )
         {
             tubomi_pl.anim.SetBool("sun", true);
         }
     }
     private void OnTriggerStay(Collider col)
     {
-        if (GManager.instance.playerselect == 1 && GManager.instance.walktrg && !GManager.instance.over && GManager.instance.setmenu <= 0)
+        if (GManager.instance.playerselect == 1 && GManager.instance.walktrg && !GManager.instance.over && GManager.instance.setmenu <= 0 && col.gameObject == tubomi_pl.gameObject)
         {
             if (!tubomi_pl.anim.GetBool("sun"))
             {
@@ -39,8 +39,8 @@ public class LightChage : MonoBehaviour
             }
             else if(GManager.instance.sun_power < maxlight_power && vl.lightMultiplier > 0)
             {
-                GManager.instance.sun_power += (Time.deltaTime / sunup_slowspeed);
-                vl.lightMultiplier -= (Time.deltaTime / sunup_slowspeed);
+                GManager.instance.sun_power += (Time.deltaTime / (sunup_slowspeed/2));
+                vl.lightMultiplier -= (Time.deltaTime / (sunup_slowspeed/2));
             }
             else if (use_trg && vl.lightMultiplier <= 0)
             {

@@ -20,6 +20,7 @@ public class wallbutton : MonoBehaviour
     private float coltime = 0f;
     private bool nocol = false;
     private GameObject tmp_leafobj;
+    public bool gimmick_clear = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,11 @@ public class wallbutton : MonoBehaviour
         buttonanim.SetInteger("Anumber", setn);
         if (connect_button == null || (connect_button != null && connect_button.staytrg && staytrg))
         {
+            if (gimmick_clear)
+            {
+                gimmick_clear = false;
+                GManager.instance.setrg = 13;
+            }
             if (wallrocks != null && wallrocks.Length > 0)
             {
                 for (int i = 0; i < wallrocks.Length;)

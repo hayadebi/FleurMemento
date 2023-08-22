@@ -11,11 +11,11 @@ public class jplocal : MonoBehaviour
         {
             GManager.instance.isEnglish = 0;
         }
-        if(!GManager.instance.resettrg)
-        {
-            GManager.instance.resettrg = true;
-            PlayerPrefs.DeleteAll();
-        }
+        //if(!GManager.instance.resettrg)
+        //{
+        //    GManager.instance.resettrg = true;
+        //    PlayerPrefs.DeleteAll();
+        //}
     }
 
     // Update is called once per frame
